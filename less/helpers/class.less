@@ -1,0 +1,266 @@
+// Generic Classes
+
+@import (reference) "../../build/libs/bootstrap/less/variables";
+
+.easy-hide {
+  display: none;
+}
+
+.cursor-hand {
+  cursor: pointer;
+}
+
+.margin-maker (@tam; @rest...) {
+  .margin-top-@{tam}@{rest} {
+    margin-top: unit(@tam, px);
+  }
+
+  .margin-bottom-@{tam}@{rest} {
+    margin-bottom: unit(@tam, px);
+  }
+
+  .margin-vertical-@{tam}@{rest} {
+    margin-top: unit(@tam, px);
+    margin-bottom: unit(@tam, px);
+  }
+
+  .margin-left-@{tam}@{rest} {
+    margin-left: unit(@tam, px);
+  }
+
+  .margin-right-@{tam}@{rest} {
+    margin-right: unit(@tam, px);
+  }
+
+  .margin-horizontal-@{tam}@{rest} {
+    margin-left: unit(@tam, px);
+    margin-right: unit(@tam, px);
+  }
+
+  .margin-@{tam}@{rest} {
+    margin-top: unit(@tam, px);
+    margin-bottom: unit(@tam, px);
+    margin-left: unit(@tam, px);
+    margin-right: unit(@tam, px);
+  }
+}
+
+.margin-maker(0);
+.margin-maker(5);
+.margin-maker(10);
+.margin-maker(15);
+.margin-maker(20);
+
+@media (max-width: @screen-xs-min) {
+  .margin-maker(0, -xs);
+  .margin-maker(5, -xs);
+  .margin-maker(10, -xs);
+  .margin-maker(15, -xs);
+  .margin-maker(20, -xs);
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-margin-xs {
+  @media (max-width: @screen-xs-min) {
+    margin: 0 !important;
+  }
+}
+
+.padding-maker (@tam; @rest...) {
+  .padding-top-@{tam}@{rest} {
+    padding-top: unit(@tam, px);
+  }
+
+  .padding-bottom-@{tam}@{rest} {
+    padding-bottom: unit(@tam, px);
+  }
+
+  .padding-vertical-@{tam}@{rest} {
+    padding-top: unit(@tam, px);
+    padding-bottom: unit(@tam, px);
+  }
+
+  .padding-left-@{tam}@{rest} {
+    padding-left: unit(@tam, px);
+  }
+
+  .padding-right-@{tam}@{rest} {
+    padding-right: unit(@tam, px);
+  }
+
+  .padding-horizontal-@{tam}@{rest} {
+    padding-left: unit(@tam, px);
+    padding-right: unit(@tam, px);
+  }
+
+  .padding-@{tam}@{rest} {
+    padding-top: unit(@tam, px);
+    padding-bottom: unit(@tam, px);
+    padding-left: unit(@tam, px);
+    padding-right: unit(@tam, px);
+  }
+}
+
+.padding-maker(0);
+.padding-maker(5);
+.padding-maker(10);
+.padding-maker(15);
+.padding-maker(20);
+
+@media (max-width: @screen-xs-min) {
+  .padding-maker(0, -xs);
+  .padding-maker(5, -xs);
+  .padding-maker(10, -xs);
+  .padding-maker(15, -xs);
+  .padding-maker(20, -xs);
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-padding-xs {
+  @media (max-width: @screen-xs-min) {
+    padding: 0 !important;
+  }
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+@media (max-width: @screen-xs-min) {
+  .col-xx-12 {
+    width: 100%;
+  }
+  .col-xx-11 {
+    width: 91.666666667%;
+  }
+  .col-xx-10 {
+    width: 83.333333333%;
+  }
+  .col-xx-9 {
+    width: 75%;
+  }
+  .col-xx-8 {
+    width: 66.666666667%;
+  }
+  .col-xx-7 {
+    width: 58.333333333%;
+  }
+  .col-xx-6 {
+    width: 50%;
+  }
+  .col-xx-5 {
+    width: 41.666666667%;
+  }
+  .col-xx-4 {
+    width: 33.333333333%;
+  }
+  .col-xx-3 {
+    width: 25%;
+  }
+  .col-xx-2 {
+    width: 16.666666667%;
+  }
+  .col-xx-1 {
+    width: 8.333333333%;
+  }
+  .hidden-xx {
+    display: none;
+  }
+}
+
+.hide-border-xs {
+  @media (max-width: @screen-xs-min) {
+    border: none !important;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.uppercase-xs {
+  @media (max-width: @screen-xs-max) {
+    text-transform: uppercase;
+  }
+}
+
+.vertical-align-center {
+  display: table;
+
+  & > * {
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.relative {
+  position: relative;
+}
+
+.block {
+  display: block;
+}
+
+.font-size-0 {
+  font-size: 0;
+}
+
+.font-size-10 {
+  font-size: 10px;
+}
+
+.font-size-13 {
+  font-size: 13px;
+}
+
+.font-size-15 {
+  font-size: 15px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-25 {
+  font-size: 25px;
+}
+
+.font-size-30 {
+  font-size: 30px;
+}
+
+.font-size-60 {
+  font-size: 60px;
+}
+
+@media (max-width: @screen-xs-min) {
+  .font-size-13-xs {
+    font-size: 13px;
+  }
+
+  .font-size-15-xs {
+    font-size: 15px;
+  }
+
+  .font-size-20-xs {
+    font-size: 20px;
+  }
+
+  .font-size-25-xs {
+    font-size: 25px;
+  }
+}

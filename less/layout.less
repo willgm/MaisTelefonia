@@ -1,0 +1,47 @@
+@import (reference) "../build/libs/bootstrap/less/mixins/vendor-prefixes";
+@import (reference) "../build/libs/bootstrap/less/mixins/forms";
+@import (reference) "../build/libs/bootstrap/less/variables";
+@import (reference) "helpers/vars";
+
+#main-layout {
+
+  body& {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 14px;
+    color: @text-color-default;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    color: @text-color-default;
+  }
+
+  a {
+    color: darken(@text-color-default, 20%);
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+  }
+
+  .point-list {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+
+  main {
+    position: relative;
+    padding-top: 30px;
+  }
+
+  > footer {
+    margin-top: 20px;
+  }
+
+}

@@ -1,0 +1,5 @@
+define [
+  'angular'
+  'ngRoute'
+  'bootstrap'
+], ->
