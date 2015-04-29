@@ -8,6 +8,7 @@ define [
 
     name: 'ScupFaleMais'
     html5Mode: true
+    apiBaseUrl: 'http://private-fe2a-scuptel.apiary-mock.com'
 
     constructor: (options) ->
       @[key] = value for own key, value of options
@@ -16,9 +17,11 @@ define [
         'pages.Home'
         'pages.Planos'
         'pages.NotFound'
+        'restangular'
       ]
 
-      .config ($routeProvider, $locationProvider) =>
+      .config ($routeProvider, $locationProvider, RestangularProvider) =>
+        RestangularProvider.setBaseUrl @apiBaseUrl
         $routeProvider.otherwise redirectTo: '/404'
         $locationProvider.html5Mode
           enabled: @html5Mode

@@ -37,3 +37,12 @@ define [
       spyOn angular, 'bootstrap'
       subject.start meuDOM = $ 'div'
       expect(angular.bootstrap).toHaveBeenCalledWith meuDOM, [ 'ScupFaleMais' ]
+
+    it 'deve iniciar url da api com valor default', inject (Restangular) ->
+      subject.start()
+      expect(Restangular.configuration.baseUrl).toBe 'http://private-fe2a-scuptel.apiary-mock.com'
+
+    it 'deve setar url da api com valor configurado', ->
+      new App apiBaseUrl: '/api'
+      module 'ScupFaleMais'
+      inject (Restangular) -> expect(Restangular.configuration.baseUrl).toBe '/api'

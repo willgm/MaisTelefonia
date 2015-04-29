@@ -69,5 +69,6 @@ gulp.task "watch", ->
   watch "./app/**/*.coffee", -> gulp.start "coffee"
   watch "./templates/**/*.html", -> gulp.start "templates"
   watch "./build/scripts/**/*.js", -> gulp.start "test"
+  watch "./test/**/*.coffee", -> gulp.start "test"
 
 gulp.task "default", ["liveload"]

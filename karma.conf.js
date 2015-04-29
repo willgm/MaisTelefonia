@@ -7,11 +7,13 @@ module.exports = function(config) {
     frameworks: ['jasmine', 'requirejs'],
 
     files: [
-      'build//libs/jquery/dist/jquery.js',
-      'build//libs/angular/angular.js',
-      'build//libs/angular-route/angular-route.js',
-      'build//libs/angular-mocks/angular-mocks.js',
-      'build//libs/bootstrap/dist/js/bootstrap.js',
+      'build/libs/jquery/dist/jquery.js',
+      'build/libs/angular/angular.js',
+      'build/libs/angular-route/angular-route.js',
+      'build/libs/angular-mocks/angular-mocks.js',
+      'build/libs/bootstrap/dist/js/bootstrap.js',
+      'build/libs/restangular/dist/restangular.js',
+      'build/libs/underscore/underscore.js',
       {pattern: 'build/scripts/**/*.js', included: false},
       {pattern: 'test/**/*.coffee', included: false},
       'test/main.js'
