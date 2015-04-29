@@ -18,7 +18,8 @@ require.config({
 
   paths:{
     app: 'build/scripts',
-    pages: 'build/scripts/pages'
+    pages: 'build/scripts/pages',
+    models: 'build/scripts/models'
   },
 
   // dynamically load all test files

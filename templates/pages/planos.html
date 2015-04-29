@@ -6,15 +6,13 @@
 
   <div class="col-xs-12 col-sm-4">
     <label for="origem" class="text-center block">Origem</label>
-    <select id="origem" class="form-control">
-      <options></options>
+    <select id="origem" class="form-control" ng-model="origem" ng-options="i.ddd as i.city for i in ctrl.ddd.data">
     </select>
   </div>
 
   <div class="col-xs-12 col-sm-4 margin-top-10-xs">
     <label for="destino" class="text-center block">Destino</label>
-    <select id="destino" class="form-control">
-      <options></options>
+    <select id="destino" class="form-control" ng-model="destino" ng-options="i.ddd as i.city for i in ctrl.ddd.data">
     </select>
   </div>
 
