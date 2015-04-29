@@ -1,6 +1,27 @@
 // Generic Classes
 
 @import (reference) "../../build/libs/bootstrap/less/variables";
+@import (reference) "vars";
+
+.font-weight-normal {
+  font-weight: normal;
+}
+
+.border-default-top {
+  border-top: @border-default;
+}
+.border-default-right {
+  border-right: @border-default;
+}
+.border-default-bottom {
+  border-bottom: @border-default;
+}
+.border-default-left {
+  border-left: @border-default;
+}
+.border-default {
+  border: @border-default;
+}
 
 .easy-hide {
   display: none;
@@ -50,6 +71,9 @@
 .margin-maker(10);
 .margin-maker(15);
 .margin-maker(20);
+.margin-maker(30);
+.margin-maker(40);
+.margin-maker(50);
 
 @media (max-width: @screen-xs-min) {
   .margin-maker(0, -xs);
@@ -57,6 +81,7 @@
   .margin-maker(10, -xs);
   .margin-maker(15, -xs);
   .margin-maker(20, -xs);
+  .margin-maker(30, -xs);
 }
 
 .no-margin {
@@ -109,6 +134,9 @@
 .padding-maker(10);
 .padding-maker(15);
 .padding-maker(20);
+.padding-maker(30);
+.padding-maker(40);
+.padding-maker(50);
 
 @media (max-width: @screen-xs-min) {
   .padding-maker(0, -xs);
@@ -116,6 +144,7 @@
   .padding-maker(10, -xs);
   .padding-maker(15, -xs);
   .padding-maker(20, -xs);
+  .padding-maker(30, -xs);
 }
 
 .no-padding {
@@ -262,5 +291,9 @@
 
   .font-size-25-xs {
     font-size: 25px;
+  }
+
+  .font-size-30-xs {
+    font-size: 30px;
   }
 }

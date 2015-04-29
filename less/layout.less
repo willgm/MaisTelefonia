@@ -38,10 +38,14 @@
   main {
     position: relative;
     padding-top: 30px;
+
+    @media (max-width: @screen-xs-min) {
+      padding-top: 0;
+    }
   }
 
   > footer {
-    margin-top: 20px;
+    padding: 20px;
   }
 
 }

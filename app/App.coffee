@@ -1,5 +1,6 @@
 define [
   "pages/Home"
+  "pages/Planos"
   "pages/NotFound"
 ], ->
 
@@ -13,6 +14,7 @@ define [
 
       angular.module @name, [
         'pages.Home'
+        'pages.Planos'
         'pages.NotFound'
       ]
 
