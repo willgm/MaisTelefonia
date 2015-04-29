@@ -20,12 +20,20 @@ server = (livereload=false) ->
         next()
     ]
 
-gulp.task "liveload", ["compile"], ->
+gulp.task "liveload", ["compile", "test"], ->
   server true
   gulp.start "watch"
 
 gulp.task "connect", ["compile"], ->
   server()
+
+gulp.task "test", (done) ->
+  require("karma").server.start
+      configFile: __dirname + '/karma.conf.js',
+      singleRun: true
+      browsers: ['PhantomJS']
+    , done
+
 
 gulp.task "less", ->
   gulp.src "./less/**/*.less"
@@ -60,5 +68,6 @@ gulp.task "watch", ->
   watch "./less/**/*.less", -> gulp.start "less"
   watch "./app/**/*.coffee", -> gulp.start "coffee"
   watch "./templates/**/*.html", -> gulp.start "templates"
+  watch "./build/scripts/**/*.js", -> gulp.start "test"
 
 gulp.task "default", ["liveload"]
