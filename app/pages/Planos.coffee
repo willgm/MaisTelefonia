@@ -1,9 +1,11 @@
 define [
   'models/DddDetails'
+  'models/Planos'
 ], ->
 
   angular.module 'pages.Planos', [
     'models.DddDetails'
+    'models.Planos'
     'ngRoute'
   ]
 
@@ -13,8 +15,9 @@ define [
       controllerAs: 'ctrl'
       controller: 'Planos'
 
-  .controller 'Planos', (DddDetails) ->
+  .controller 'Planos', (DddDetails, Planos) ->
 
     @ddd = DddDetails.get('').$object
+    @planos = Planos.get('').$object
 
     @
