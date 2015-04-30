@@ -1,11 +1,13 @@
 define [
   'models/DddDetails'
   'models/Planos'
+  'models/Precos'
 ], ->
 
   angular.module 'pages.Planos', [
     'models.DddDetails'
     'models.Planos'
+    'models.Precos'
     'ngRoute'
   ]
 
@@ -15,9 +17,18 @@ define [
       controllerAs: 'ctrl'
       controller: 'Planos'
 
-  .controller 'Planos', (DddDetails, Planos) ->
+  .filter 'parseInt', -> (v) -> parseInt v
+
+  .controller 'Planos', (DddDetails, Planos, Precos) ->
 
     @ddd = DddDetails.getList().$object
     @planos = Planos.getList().$object
+    @precos = Precos.getList().$object
+
+    @obterPreco = (origem, destino) ->
+      p = @precos
+        .filter (p) -> p.origin is origem and p.destiny is destino
+        .pop()
+      if p then parseFloat p.price else null
 
     @
