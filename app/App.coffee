@@ -22,6 +22,9 @@ define [
 
       .config ($routeProvider, $locationProvider, RestangularProvider) =>
         RestangularProvider.setBaseUrl @apiBaseUrl
+        RestangularProvider.addResponseInterceptor (data, operation) ->
+          if operation is 'getList' then data.data else data
+
         $routeProvider.otherwise redirectTo: '/404'
         $locationProvider.html5Mode
           enabled: @html5Mode

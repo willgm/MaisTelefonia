@@ -16,9 +16,9 @@ define [
       subject = newSubject()
 
     it 'deve obter lista com detalhes dos DDD', inject (DddDetails) ->
-      spyOn(DddDetails, 'get').and.returnValue $object: dddList = {a:1,b:2}
-      expect(newSubject().ddd).toBe dddList
+      spyOn(DddDetails, 'getList').and.returnValue $object: data = {a:1,b:2}
+      expect(newSubject().ddd).toBe data
 
     it 'deve obter lista de planos', inject (Planos) ->
-      spyOn(Planos, 'get').and.returnValue $object: data = {a:1,b:2}
+      spyOn(Planos, 'getList').and.returnValue $object: data = {a:1,b:2}
       expect(newSubject().planos).toBe data

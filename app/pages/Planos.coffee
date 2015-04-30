@@ -17,7 +17,7 @@ define [
 
   .controller 'Planos', (DddDetails, Planos) ->
 
-    @ddd = DddDetails.get('').$object
-    @planos = Planos.get('').$object
+    @ddd = DddDetails.getList().$object
+    @planos = Planos.getList().$object
 
     @
