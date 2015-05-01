@@ -7,6 +7,8 @@ require.config
     bootstrap: '/libs/bootstrap/dist/js/bootstrap'
     restangular: '/libs/restangular/dist/restangular'
     underscore: '/libs/underscore/underscore'
+    select2: '/libs/select2/select2'
+    uiSelect2: '/libs/angular-ui-select2/src/select2'
 
   shim:
     jquery:
@@ -20,3 +22,7 @@ require.config
       deps : ['angular']
     restangular:
       deps : ['angular', 'underscore']
+    select2:
+      deps : ['jquery']
+    uiSelect2:
+      deps : ['angular', 'select2']

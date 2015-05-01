@@ -14,6 +14,8 @@ module.exports = function(config) {
       'build/libs/bootstrap/dist/js/bootstrap.js',
       'build/libs/restangular/dist/restangular.js',
       'build/libs/underscore/underscore.js',
+      'build/libs/select2/select2.js',
+      'build/libs/angular-ui-select2/src/select2.js',
       {pattern: 'build/scripts/**/*.js', included: false},
       {pattern: 'test/**/*.coffee', included: false},
       'test/main.js'

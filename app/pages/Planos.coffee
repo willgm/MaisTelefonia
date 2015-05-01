@@ -8,6 +8,7 @@ define [
     'models.DddDetails'
     'models.Planos'
     'models.Precos'
+    'ui.select2'
     'ngRoute'
   ]
 

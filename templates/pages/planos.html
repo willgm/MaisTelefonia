@@ -6,13 +6,17 @@
 
   <div class="col-xs-12 col-sm-5 padding-left-5">
     <label for="origem" class="text-center block">Origem</label>
-    <select id="origem" class="form-control" ng-model="origem" ng-options="i.ddd as i.city for i in ctrl.ddd" ng-change="preco=ctrl.obterPreco(origem, destino)">
+    <select id="origem" class="form-control" ui-select2 ng-model="origem" ng-change="preco=ctrl.obterPreco(origem, destino)">
+      <option value=""></option>
+      <option ng-repeat="i in ctrl.ddd" value="{{i.ddd}}">{{i.ddd}} - {{i.city}}</option>
     </select>
   </div>
 
   <div class="col-xs-12 col-sm-5 margin-top-10-xs padding-left-5">
     <label for="destino" class="text-center block">Destino</label>
-    <select id="destino" class="form-control" ng-model="destino" ng-options="i.ddd as i.city for i in ctrl.ddd" ng-change="preco=ctrl.obterPreco(origem, destino)">
+    <select id="destino" class="form-control" ui-select2 ng-model="destino" ng-change="preco=ctrl.obterPreco(origem, destino)">
+      <option value=""></option>
+      <option ng-repeat="i in ctrl.ddd" value="{{i.ddd}}">{{i.ddd}} - {{i.city}}</option>
     </select>
   </div>
 

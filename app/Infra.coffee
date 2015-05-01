@@ -3,4 +3,5 @@ define [
   'ngRoute'
   'bootstrap'
   'restangular'
+  'uiSelect2'
 ], ->
