@@ -26,9 +26,8 @@ define [
     @precos = Precos.getList().$object
 
     @obterPreco = (origem, destino) ->
-      p = @precos
+      @precos
         .filter (p) -> p.origin is origem and p.destiny is destino
         .pop()
-      if p then parseFloat p.price else null
 
     @

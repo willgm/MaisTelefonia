@@ -29,30 +29,32 @@ define [
 
     describe 'Ao obter preco de origem e destino', ->
 
+      data = [
+        {
+          "origin": "011",
+          "destiny": "016",
+          "price": "1.90"
+        },
+        {
+          "origin": "016",
+          "destiny": "011",
+          "price": "2.90"
+        },
+        {
+          "origin": "011",
+          "destiny": "017",
+          "price": "1.70"
+        }
+      ]
+
       beforeEach inject (Precos) ->
-        spyOn(Precos, 'getList').and.returnValue $object: [
-          {
-            "origin": "011",
-            "destiny": "016",
-            "price": "1.90"
-          },
-          {
-            "origin": "016",
-            "destiny": "011",
-            "price": "2.90"
-          },
-          {
-            "origin": "011",
-            "destiny": "017",
-            "price": "1.70"
-          }
-        ]
+        spyOn(Precos, 'getList').and.returnValue $object: data
         subject = newSubject()
 
       it 'deve retornar nulo caso não encontre', inject (Precos) ->
-        expect(subject.obterPreco '666', '999').toBeNull()
+        expect(subject.obterPreco '666', '999').toBeUndefined()
 
       it 'deve retornar valor correspondente para cada origem e destino', inject (Precos) ->
-        expect(subject.obterPreco '011', '016').toBe 1.9
-        expect(subject.obterPreco '016', '011').toBe 2.9
-        expect(subject.obterPreco '011', '017').toBe 1.7
+        expect(subject.obterPreco '011', '016').toBe data[0]
+        expect(subject.obterPreco '016', '011').toBe data[1]
+        expect(subject.obterPreco '011', '017').toBe data[2]

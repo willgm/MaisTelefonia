@@ -29,7 +29,8 @@
     <span ng-bind="plano.plan"></span><br>
     <span class="text-center font-size-20 margin-top-5 block" ng-if="!(tempo && preco)">-</span>
     <span ng-if="tempo && preco">
-      R$ <span ng-bind="plano.time" class="font-size-30 font-size-20-xs font-weight-normal"></span>,00
+      R$ <span ng-bind="preco.calcular(tempo, plano) | parseInt" class="font-size-30 font-size-20-xs font-weight-normal"></span>,
+      <span ng-bind="(preco.calcular(tempo, plano) | number:2).toString().split('.')[1]"></span>
     </span>
   </label>
 
@@ -37,8 +38,8 @@
     Normal<br>
     <span class="text-center font-size-20 margin-top-5 block" ng-if="!(tempo && preco)">-</span>
     <span ng-if="tempo && preco">
-      R$ <span class="font-size-30 font-size-20-xs font-weight-normal" ng-bind="(preco * tempo) | parseInt"></span>,
-      <span ng-bind="((preco*tempo) | number:2).toString().split('.')[1]"></span>
+      R$ <span ng-bind="preco.calcular(tempo) | parseInt" class="font-size-30 font-size-20-xs font-weight-normal"></span>,
+      <span ng-bind="(preco.calcular(tempo) | number:2).toString().split('.')[1]"></span>
     </span>
   </label>
 
