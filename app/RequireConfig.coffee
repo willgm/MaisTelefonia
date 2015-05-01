@@ -9,6 +9,7 @@ require.config
     underscore: '/libs/underscore/underscore'
     select2: '/libs/select2/select2'
     uiSelect2: '/libs/angular-ui-select2/src/select2'
+    angularMask: '/libs/angular-mask/dist/ngMask'
 
   shim:
     jquery:
@@ -26,3 +27,5 @@ require.config
       deps : ['jquery']
     uiSelect2:
       deps : ['angular', 'select2']
+    angularMask:
+      deps : ['angular']

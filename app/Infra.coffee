@@ -4,4 +4,5 @@ define [
   'bootstrap'
   'restangular'
   'uiSelect2'
+  'angularMask'
 ], ->

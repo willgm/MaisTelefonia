@@ -10,6 +10,7 @@ define [
     'models.Precos'
     'ui.select2'
     'ngRoute'
+    'ngMask'
   ]
 
   .config ($routeProvider) ->
