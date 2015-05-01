@@ -40,7 +40,7 @@ define [
 
     it 'deve iniciar url da api com valor default', inject (Restangular) ->
       subject.start()
-      expect(Restangular.configuration.baseUrl).toBe 'http://private-fe2a-scuptel.apiary-mock.com'
+      expect(Restangular.configuration.baseUrl).toBe 'https://private-fe2a-scuptel.apiary-mock.com'
 
     it 'deve setar url da api com valor configurado', ->
       new App apiBaseUrl: '/api'

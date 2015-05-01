@@ -8,7 +8,7 @@ define [
 
     name: 'ScupFaleMais'
     html5Mode: true
-    apiBaseUrl: 'http://private-fe2a-scuptel.apiary-mock.com'
+    apiBaseUrl: 'https://private-fe2a-scuptel.apiary-mock.com'
 
     constructor: (options) ->
       @[key] = value for own key, value of options
