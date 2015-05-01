@@ -13,6 +13,7 @@
     "underscore": "1.8.3",
     "angular-ui-select2": "0.0.5",
     "select2": "3.4.8",
+    "select2-bootstrap-css": "1.4.6",
     "angular-mask": "3.0.12"
   },
   "devDependencies": {
