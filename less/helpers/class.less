@@ -23,6 +23,12 @@
   border: @border-default;
 }
 
+.no-border-xs {
+  @media (max-width: @screen-xs-min) {
+    border: none;
+  }
+}
+
 .easy-hide {
   display: none;
 }
@@ -200,12 +206,6 @@
   }
   .hidden-xx {
     display: none;
-  }
-}
-
-.hide-border-xs {
-  @media (max-width: @screen-xs-min) {
-    border: none !important;
   }
 }
 
