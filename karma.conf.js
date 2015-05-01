@@ -18,8 +18,8 @@ module.exports = function(config) {
       'build/libs/angular-ui-select2/src/select2.js',
       'build/libs/angular-mask/dist/ngMask.js',
       {pattern: 'build/scripts/**/*.js', included: false},
-      {pattern: 'test/**/*.coffee', included: false},
-      'test/main.js'
+      {pattern: 'tests/**/*.coffee', included: false},
+      'tests/unidade/main.js'
     ],
 
     exclude: [
