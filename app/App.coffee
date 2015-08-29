@@ -6,7 +6,7 @@ define [
 
   class App
 
-    name: 'ScupFaleMais'
+    name: 'MaisTelefonia'
     html5Mode: true
     apiBaseUrl: 'https://private-fe2a-scuptel.apiary-mock.com'
 

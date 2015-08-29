@@ -8,10 +8,10 @@ define [
 
     beforeEach ->
       subject = new App
-      module 'ScupFaleMais'
+      module 'MaisTelefonia'
 
     it 'deve ter um nome padrão', ->
-      expect(subject.name).toBe 'ScupFaleMais'
+      expect(subject.name).toBe 'MaisTelefonia'
 
     it 'deve utilizar o nome passado', ->
       subject = new App name: 'minha-app'
@@ -25,18 +25,18 @@ define [
 
     it 'deve setar html5 mode como false caso configurado para tal', ->
       new App html5Mode: false
-      module 'ScupFaleMais'
+      module 'MaisTelefonia'
       inject ($location) -> expect($location.$$html5).toBeFalsy()
 
     it 'deve iniciar aplicação na raiz do DOM por padrão', ->
       spyOn angular, 'bootstrap'
       subject.start()
-      expect(angular.bootstrap).toHaveBeenCalledWith document, [ 'ScupFaleMais' ]
+      expect(angular.bootstrap).toHaveBeenCalledWith document, [ 'MaisTelefonia' ]
 
     it 'deve iniciar aplicação no node de DOM passado', ->
       spyOn angular, 'bootstrap'
       subject.start meuDOM = $ 'div'
-      expect(angular.bootstrap).toHaveBeenCalledWith meuDOM, [ 'ScupFaleMais' ]
+      expect(angular.bootstrap).toHaveBeenCalledWith meuDOM, [ 'MaisTelefonia' ]
 
     it 'deve iniciar url da api com valor default', inject (Restangular) ->
       subject.start()
@@ -44,5 +44,5 @@ define [
 
     it 'deve setar url da api com valor configurado', ->
       new App apiBaseUrl: '/api'
-      module 'ScupFaleMais'
+      module 'MaisTelefonia'
       inject (Restangular) -> expect(Restangular.configuration.baseUrl).toBe '/api'
