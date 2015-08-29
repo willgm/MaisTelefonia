@@ -20,6 +20,14 @@ module.exports = class Planos extends Page
     element(By.className "plano-#{time}")
     .getAttribute 'data-price'
 
+  planoSemValor: (time) ->
+    element(By.className "semvalor-plano-#{time}")
+    .isPresent()
+
   getValorNormal: ->
     element(By.className 'normal-price')
     .getAttribute 'data-price'
+
+  precoNormalSemValor: ->
+    element(By.className "semvalor-normal-price")
+    .isPresent()
